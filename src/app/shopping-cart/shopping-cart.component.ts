@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule, CurrencyPipe } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-shopping-cart',
   standalone: true,
-  imports: [CurrencyPipe, CommonModule],
+  imports: [CurrencyPipe, CommonModule, MatIconModule],
   templateUrl: './shopping-cart.component.html',
   styleUrls: ['./shopping-cart.component.css']
 })

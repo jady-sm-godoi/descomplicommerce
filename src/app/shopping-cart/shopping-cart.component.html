@@ -6,12 +6,14 @@
           <span>{{ item.name }}</span>
           <span>{{ item.price | currency:'BRL':'symbol':'1.2-2' }}</span>
           <div class="quantity-control">
-              <button (click)="decreaseQuantity(item)">-</button>
+              <button (click)="decreaseQuantity(item)"><mat-icon>remove</mat-icon></button>
               <span>{{ item.quantity }}</span>
-              <button (click)="increaseQuantity(item)">+</button>
+              <button (click)="increaseQuantity(item)"><mat-icon>add</mat-icon></button>
           </div>
       </div>
-      <button (click)="removeItem(item)">Remover</button>
+      <button mat-icon-button (click)="removeItem(item)" aria-label="Remover item">
+        <mat-icon>delete</mat-icon>
+      </button>
   </div>
   <div class="cart-total">
       Total: {{ getTotal() | currency:'BRL':'symbol':'1.2-2' }}
